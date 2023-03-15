@@ -10,52 +10,6 @@ g = graph_from_file(data_path + file_name)
 print(g)
 '''
 
-'''
-On stocke au préalable les adresses des fichiers dans des variables:
-filename1 correspond toujours au fichier .routes.in
-filename2 au fichier network.in
-filename3 au fichier routes.out
-'''
-filename1_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.1.in"
-filename1_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.1.in"
-filename1_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.1.out"
-
-filename2_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.2.in "
-filename2_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.2.in "
-filename2_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.out"
-
-filename3_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.in"
-filename3_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.3.in"
-filename3_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.out"
-
-filename4_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.4.in"
-filename4_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.4.in"
-filename4_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.4.out"
-
-filename5_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.5.in"
-filename5_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.5.in"
-filename5_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.5.out"
-
-filename6_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.6.in"
-filename6_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.6.in"
-filename6_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.6.out"
-
-filename7_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.7.in"
-filename7_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.7.in"
-filename7_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.7.out"
-
-filename8_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.8.in"
-filename8_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.8.in"
-filename8_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.8.out"
-
-filename9_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.9.in"
-filename9_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.9.in"
-filename9_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.9.out"
-
-filename10_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.10.in"
-filename10_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.10.in"
-filename10_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.10.out"
-
 #Séance 2  
 
 '''
