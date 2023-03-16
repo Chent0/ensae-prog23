@@ -10,53 +10,7 @@ g = graph_from_file(data_path + file_name)
 print(g)
 '''
 
-'''
-On stocke au préalable les adresses des fichiers dans des variables:
-filename1 correspond toujours au fichier .routes.in
-filename2 au fichier network.in
-filename3 au fichier routes.out
-'''
-'''
-filename1_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.1.in"
-filename1_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.1.in"
-filename1_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.1.out"
 
-filename2_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.2.in "
-filename2_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.2.in "
-filename2_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.out"
-
-filename3_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.in"
-filename3_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.3.in"
-filename3_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.3.out"
-
-filename4_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.4.in"
-filename4_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.4.in"
-filename4_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.4.out"
-
-filename5_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.5.in"
-filename5_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.5.in"
-filename5_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.5.out"
-
-filename6_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.6.in"
-filename6_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.6.in"
-filename6_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.6.out"
-
-filename7_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.7.in"
-filename7_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.7.in"
-filename7_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.7.out"
-
-filename8_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.8.in"
-filename8_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.8.in"
-filename8_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.8.out"
-
-filename9_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.9.in"
-filename9_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.9.in"
-filename9_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.9.out"
-
-filename10_1=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.10.in"
-filename10_2=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\network.10.in"
-filename10_3=r"C:\Users\auran\OneDrive\Documents\ensae\1A\Projet de programmation\projet programmation_dernier essai\ensae-prog23\input\routes.10.out"
-'''
 #Séance 2  
 
 '''
@@ -293,7 +247,7 @@ routes.8=19.877801799993904 s
 routes.9=25.81786640000064 s
 routes.10=
 '''
-print(write_in_routes(filename2_1,filename2_2,filename2_3))
+#write_in_routes("input/routes.3.in","input/network.3.in","input/routes.3.out")
 #print(test_time(filename1_1,filename1_2,filename1_3))
 #print(test_time(filename2_1,filename2_2,filename2_3))
 #print(test_time(filename3_1,filename3_2,filename3_3))
@@ -304,3 +258,57 @@ print(write_in_routes(filename2_1,filename2_2,filename2_3))
 #print(test_time(filename8_1,filename8_2,filename8_3))
 #print(test_time(filename9_1,filename9_2,filename9_3))
 #print(test_time(filename10_1,filename10_2,filename10_3))
+
+'séance 4'
+def trucks_from_file(filename):
+    with open(filename, "r") as file:
+        nb_camions=(map(int, file.readline()))
+        liste_camions=[]
+        for i in range(nb_camions):
+            liste_camions.append(list(map(int, file.readline().split())))
+    return nb_camions, liste_camions
+
+def route_from_file(filename):
+    with open(filename, "r") as file:
+        nb_trajets=(map(int, file.readline()))
+        liste_trajets=[]
+        for i in range(nb_trajets):
+            liste_trajets.append(list(map(int, file.readline().split())))
+    return nb_routes, liste_trajets
+
+def routeout_from_file(filename):
+    with open(filename, "r") as file:
+        liste=[]
+        liste =map(int, file.readlines().split())
+    return liste
+trucks_from_file("input/trucks.0.in")
+
+def best_truck(routefile,truckfile,routeoutfile):
+    l=[]
+    liste_trajets=route_from_file(routefile)[1]
+    N,liste_camions=trucks_from_file(truckfile)
+    liste_power=routeout_from_file(routeoutfile)
+    C= max(liste_camions[i][1] for i in range(N)) #max des coûts des camions
+    for power in liste_power: 
+        T=[]
+        for camion in liste_camions:
+            if camion[0]>=power and camion[1]<=C:
+                T=camion
+
+            
+
+
+
+        
+
+def tri_camions(filename):
+    liste_camions=reversed(trucks_from_file(filename))
+    liste_camions_bis=[]
+    [p,c]=liste_camions[0]
+    for power, cost in liste_camions:
+        if power<=p and cost<=c:
+            liste_camions_bis.insert([p,c])
+        p,c=power,cost
+    
+
+
