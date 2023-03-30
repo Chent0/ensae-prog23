@@ -234,6 +234,9 @@ def write_in_routes(filename1, filename2, filename3):
                     otherfile.write(str(pow)+"\n")
         otherfile.close()
 
+#write_in_routes('input/routes.10.in', 'input/network.10.in', 'input/routes.10.out')
+
+
 '''
 Temps d'exécution (tot_time) obtenus pour les différents fichiers routes:
 routes.1= 0.0003954999992856756 s
@@ -262,7 +265,8 @@ routes.10=
 'séance 4'
 def trucks_from_file(filename):
     with open(filename, "r") as file:
-        nb_camions=(map(int, file.readline()))
+        nb_camions=file.readline()
+        nb_camions=int(nb_camions[0])
         liste_camions=[]
         for i in range(nb_camions):
             liste_camions.append(list(map(int, file.readline().split())))
@@ -270,20 +274,23 @@ def trucks_from_file(filename):
 
 def route_from_file(filename):
     with open(filename, "r") as file:
-        nb_trajets=(map(int, file.readline()))
+        nb_trajets=file.readline()
+        nb_trajets=int(nb_trajets)
         liste_trajets=[]
         for i in range(nb_trajets):
             liste_trajets.append(list(map(int, file.readline().split())))
-    return nb_routes, liste_trajets
+    return nb_trajets, liste_trajets
 
 def routeout_from_file(filename):
     with open(filename, "r") as file:
         liste=[]
-        liste =map(int, file.readlines().split())
+        liste=file.read().split()
+        for i in range (len(liste)):
+            liste[i]=int(liste[i])
     return liste
-trucks_from_file("input/trucks.0.in")
 
-def best_truck(routefile,truckfile,routeoutfile):
+
+def best_truck(routefile,truckfile,routeoutfile): #renvoie la liste des meilleurs camions pour chaque trajet
     l=[]
     liste_trajets=route_from_file(routefile)[1]
     N,liste_camions=trucks_from_file(truckfile)
@@ -294,21 +301,83 @@ def best_truck(routefile,truckfile,routeoutfile):
         for camion in liste_camions:
             if camion[0]>=power and camion[1]<=C:
                 T=camion
+                C=camion[1]
+        l.append(T)
+    return l #l de la forme [indice du trajet,power,coût,prime,profit/coût]
 
-            
+def best_camion(routes,camions,puissances_min):
+    #routes=routes[1]
+    #camions=camions[1]
+    L=[]
+    for k in range (len(routes)):
+        profit=routes[k][2]
+        src,dest=routes[k][0],routes[k][1]
+        power=puissances_min[k]
+        p,c= False, max([camions[k][1] for k in range (len(camions))])
+        for j in range (len(camions)):
+            print(type(camions[j][0]))
+            print(type(power))
+            if camions[j][0]>=power and camions[j][1]<c:
+                p=camions[j][0]
+                c=camions[j][1]
+        if p!=False: #Si l'on a trouvé au moins un camion pouvant parcourir le trajet 
+            #d[(src,dest)]=(p,c,profit)
+            res=profit/c
+            L.append([(src, dest),p,c,profit,res])
+    return L
+'''routes=route_from_file('input/routes.1.in')
+camions=trucks_from_file('input/trucks.1.in')
+puissances_min=routeout_from_file('input/routes.1.out')
+print(best_camion(routes, camions, puissances_min))   '''
 
-
-
-        
-
-def tri_camions(filename):
-    liste_camions=reversed(trucks_from_file(filename))
+def tri_camions(filename): #tri un fichier camion en retirant les camions 'inutiles';renvoie une liste 
+    liste_camions=reversed(trucks_from_file(filename)[1])
     liste_camions_bis=[]
     [p,c]=liste_camions[0]
     for power, cost in liste_camions:
         if power<=p and cost<=c:
             liste_camions_bis.insert([p,c])
         p,c=power,cost
-    
+    return liste_camions_bis
+
+
+def knapsack (routes, camions, puissances_min):
+    income=B
+    Buy={camions[k][0]:[0] for k in range (len(camions))}
+    profit=0
+    L=best_camion(routes, camions, puissances_min)
+    new_L=sorted(L, key=lambda x:x[4], reverse=True) #tri par 4e valeur décroissante
+    stop=False
+    k=0
+    while stop!=True:
+        src, dest=new_L[k][0]
+        pow=new_L[k][1]
+        cost=new_L[k][2]
+        earn=new_L[k][3]
+        if income-cost>=0:
+            Buy[pow].append((src, dest))
+            Buy[pow][0]+=1
+            profit+=earn-cost
+            income-=cost
+            k+=1
+        if income-cost<0:
+            k+=1
+        if k==len(new_L):
+            stop=True
+    return Buy, profit
+
+def final_knapsack(truckname,routename1,routename2):
+    camions1=trucks_from_file(truckname)[1]
+    routes=route_from_file(routename1)[1]
+    powers=routeout_from_file(routename2)[1]
+    camions2=tri_camions(truckname)
+    buy, profit=knapsack(routes, camions2, powers)
+    return buy, profit 
+
+routes=route_from_file('input/routes.1.in')
+camions=trucks_from_file('input/trucks.1.in')
+puissances_min=routeout_from_file('input/routes.1.out')
+
+final_knapsack('input/trucks.1.in', 'input/routes.1.in', 'input/routes.1.out')
 
 
